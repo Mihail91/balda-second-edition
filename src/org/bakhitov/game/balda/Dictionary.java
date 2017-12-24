@@ -8,6 +8,6 @@ public class Dictionary {
 
     @Override
     public String toString() {
-        return "Dictionary class";
+        return "Dictionary class empty";
     }
 }
