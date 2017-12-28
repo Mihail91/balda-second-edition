@@ -10,9 +10,15 @@
     <context:annotation-config />
 
     <bean id="dictionary" class="org.bakhitov.game.balda.Dictionary">
+        <property name="start" value="true"/>
     </bean>
     <bean id="game" class="org.bakhitov.game.balda.Game">
         <property name="dictionary" ref="dictionary"/>
+        <property name="parser" ref="parser"/>
+    </bean>
+    <bean id="parser" class="org.bakhitov.game.balda.Parser">
+        <constructor-arg name="dictionary" ref="dictionary"/>
+        <constructor-arg name="fileName" value="word_rus.txt"/>
     </bean>
 
 </beans>
